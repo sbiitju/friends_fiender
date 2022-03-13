@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Friend\'s Finder</string>
+    <string name="server_client_id">600170007168-j8avj4jpv161irevkffoarcfrrrtibp8.apps.googleusercontent.com</string>
+    <string name="sign_in_with_google">Sign In with Google</string>
 </resources>
