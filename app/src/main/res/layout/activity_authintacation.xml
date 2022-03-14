@@ -5,7 +5,7 @@
 
     <data>
         <variable
-            name="view_model"
+            name="viewmodel"
             type="com.sbiitju.defenseproject.viewmodel.AuthViewModel" />
 
     </data>
@@ -18,11 +18,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Let's Connect to your friend"
+            android:text="@string/let_s_connect_to_your_friend"
             app:layout_constraintBottom_toTopOf="@id/friendsfinder"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/purple_200"
             android:layout_marginBottom="10dp" />
@@ -34,7 +34,7 @@
             android:layout_marginBottom="30dp"
             android:text="@string/app_name"
             android:textStyle="bold"
-            android:textSize="35dp"
+            android:textSize="35sp"
             android:textColor="@color/purple_500"
             android:fontFamily="@font/abril_fatface"
             app:layout_constraintBottom_toTopOf="@id/googleBtn"
@@ -45,7 +45,7 @@
             android:id="@+id/googleBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{view_model::signIn}"
+            android:onClick="@{viewmodel::signIn}"
             android:text="@string/sign_in_with_google"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

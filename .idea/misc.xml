@@ -3,9 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Development/DefenseProject/app/src/main/res/drawable/splash_screen.xml" value="0.107" />
-        <entry key="..\:/Development/DefenseProject/app/src/main/res/layout/activity_authentication.xml" value="0.18" />
+        <entry key="..\:/Development/DefenseProject/app/src/main/res/layout/activity_authentication.xml" value="0.16485507246376813" />
         <entry key="..\:/Development/DefenseProject/app/src/main/res/layout/activity_main.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/BS328/AndroidStudioProjects/Defense Project/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/BS328/AndroidStudioProjects/Defense Project/app/src/main/res/drawable/splash_screen.xml" value="0.1085" />
+        <entry key="..\:/Users/BS328/AndroidStudioProjects/Defense Project/app/src/main/res/layout/activity_authentication.xml" value="0.22" />
+        <entry key="..\:/Users/BS328/AndroidStudioProjects/Defense Project/app/src/main/res/layout/activity_authintacation.xml" value="0.2" />
+        <entry key="..\:/Users/BS328/AndroidStudioProjects/Defense Project/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/BS328/AndroidStudioProjects/Defense Project/app/src/main/res/layout/activity_working.xml" value="0.2" />
+        <entry key="..\:/Users/BS328/AndroidStudioProjects/Defense Project/app/src/main/res/menu/common.xml" value="0.2" />
       </map>
     </option>
   </component>
