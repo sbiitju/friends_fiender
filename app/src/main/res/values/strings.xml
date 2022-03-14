@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Friend\'s Finder</string>
+    <string name="server_client_id">600170007168-j8avj4jpv161irevkffoarcfrrrtibp8.apps.googleusercontent.com</string>
+    <string name="sign_in_with_google">Sign In with Google</string>
+    <string name="web_client_id">600170007168-af26mrq0og6917qjrgg6hhp60l5004un.apps.googleusercontent.com</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_working">WorkingActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="let_s_connect_to_your_friend">Let\'s Connect to your friend</string>
 </resources>
