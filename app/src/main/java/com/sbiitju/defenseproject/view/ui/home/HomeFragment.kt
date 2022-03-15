@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.sbiitju.defenseproject.databinding.FragmentHomeBinding
+import com.sbiitju.defenseproject.model.data.Profile
 
 class HomeFragment : Fragment() {
 
@@ -28,10 +29,12 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+//        val textView: TextView = binding.textHome
+        var profile=Profile("Shahin bashar","sbiitju@gmail.com","01613162522")
+        binding.profile=profile
+//        homeViewModel.text.observe(viewLifecycleOwner) {
+//            textView.text = it
+//        }
         return root
     }
 

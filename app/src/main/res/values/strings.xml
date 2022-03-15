@@ -17,4 +17,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="let_s_connect_to_your_friend">Let\'s Connect to your friend</string>
+    <string name="search_friend_s">Search Friend\'s</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="i_am_in_danger">Ask Help</string>
 </resources>
