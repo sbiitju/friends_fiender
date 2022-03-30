@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginVertical="10dp"
+    android:layout_marginHorizontal="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@+id/view"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        />
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchPhoto"
+        android:src="@drawable/ic_baseline_person_search_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        />
+
+    <TextView
+        android:id="@+id/searcName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/searchEmail"
+        android:text="Shahin Bashar"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/searchPhoto"
+        app:layout_constraintTop_toBottomOf="@id/view" />
+
+    <TextView
+        android:id="@+id/searchEmail"
+        android:layout_width="0dp"
+        android:textColor="#DDDC0C0C"
+        android:padding="10dp"
+        android:autoLink="email"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="shahin bashar"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/searchPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/searcName" />
+
+    <Button
+        android:id="@+id/requestBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Accept"
+        android:textStyle="bold"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="@id/searchEmail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/searchEmail"
+        app:layout_constraintTop_toBottomOf="@id/searchEmail"
+        app:layout_constraintVertical_bias="1.0" />
+    <View
+        android:id="@+id/view2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

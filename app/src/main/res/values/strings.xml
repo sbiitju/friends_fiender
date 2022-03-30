@@ -12,12 +12,24 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="title_activity_working">WorkingActivity</string>
+    <string name="title_activity_working">Home</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_dashboard">Friends</string>
     <string name="title_notifications">Notifications</string>
     <string name="let_s_connect_to_your_friend">Let\'s Connect to your friend</string>
     <string name="search_friend_s">Search Friend\'s</string>
     <string name="sign_out">Sign Out</string>
     <string name="i_am_in_danger">Ask Help</string>
+    <string-array name="blood">
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O-</item>
+        <item>O+</item>
+        <item>Not Sure</item>
+    </string-array>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>

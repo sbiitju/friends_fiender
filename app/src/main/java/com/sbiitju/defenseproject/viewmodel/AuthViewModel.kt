@@ -19,4 +19,8 @@ class AuthViewModel: ViewModel() {
         val googleSignInClient:GoogleSignInClient?=null
         responseInterface?.onUpdate("check")
     }
+    val test:String?=null
+    fun onSkip(){
+
+    }
 }

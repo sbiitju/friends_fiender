@@ -1,91 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="#ffffff"
-        android:layout_height="wrap_content">
-
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:menu="@menu/common"
-            style="@style/Widget.MaterialComponents.Toolbar.Surface"
-            >
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
-
-                <TextView
-                    android:id="@+id/displayName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/abril_fatface"
-                    android:gravity="center"
-                    app:chainUseRtl="true"
-                    android:textColor="@color/purple_500"
-                    app:layout_constraintEnd_toStartOf="@id/topbarImage"
-                    app:layout_constraintHorizontal_chainStyle="spread"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    app:layout_constraintStart_toStartOf="@id/displayName"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:id="@+id/topbarImage"
-                    />
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:pointerIcon="context_menu"
-                    style="@style/Widget.Material3.Button.TextButton.Icon"
-                    app:icon="@drawable/ic_baseline_help_outline_24"
-                    app:layout_constraintStart_toEndOf="@id/topbarImage"
-                    android:text="Ask Help"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </com.google.android.material.appbar.MaterialToolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        app:navigationIcon="@drawable/ic_baseline_menu_24"
-        android:background="?android:attr/windowBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
-
-    <fragment
-        android:id="@+id/nav_host_fragment_activity_working"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+    <LinearLayout
+        android:layout_marginHorizontal="29dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:layout_constraintBottom_toTopOf="@id/nav_view"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/mobile_navigation" />
+        android:orientation="vertical"
+        android:gravity="center"
+        >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/myFriendList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:text="My Friend List"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"
+        />
+    <Button
+        android:id="@+id/traceMe"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:text="Who wants to Add me?"
+        android:textAllCaps="false"
+        />
+    <Button
+        android:id="@+id/nearestFriend"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:text="Nearest Friend"
+        android:textAllCaps="false"
+        />
+    <Button
+        android:id="@+id/nearestPolice"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+
+        android:text="Nearest Police Station"
+        android:textAllCaps="false"
+        />
+    <Button
+        android:id="@+id/nearestHospital"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:layout_constraintTop_toBottomOf="@id/nearestPolice"
+        app:layout_constraintStart_toStartOf="@id/nearestPolice"
+        app:layout_constraintEnd_toEndOf="@id/nearestPolice"
+        android:text="Nearest Hospital"
+        android:textAllCaps="false"
+        />
+    <Button
+        android:id="@+id/nearestATM"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:layout_constraintTop_toBottomOf="@id/nearestHospital"
+        app:layout_constraintStart_toStartOf="@id/nearestHospital"
+        app:layout_constraintEnd_toEndOf="@id/nearestHospital"
+        android:text="Nearest ATM"
+        android:textAllCaps="false"
+        />
+    <Button
+        android:id="@+id/call999"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:layout_constraintTop_toBottomOf="@id/nearestATM"
+        app:layout_constraintStart_toStartOf="@id/nearestATM"
+        app:layout_constraintEnd_toEndOf="@id/nearestATM"
+        android:text="Call 999"
+        android:textAllCaps="false"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/friendsearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="20dp"
+            android:inputType="phone"
+            android:padding="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="match_parent"
+        style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+        app:icon="@drawable/ic_baseline_person_search_24"
+        android:layout_height="wrap_content"
+        android:text="Search Friend"
+        app:layout_constraintStart_toStartOf="@id/friendsearch"
+        app:layout_constraintEnd_toEndOf="@id/friendsearch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    </LinearLayout>
+</ScrollView>

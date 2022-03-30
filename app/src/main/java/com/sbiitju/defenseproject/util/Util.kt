@@ -9,4 +9,9 @@ class Util{
 
         }
     }
+    companion object{
+        fun test(test:String):String{
+            return test+"Changed"
+        }
+    }
 }

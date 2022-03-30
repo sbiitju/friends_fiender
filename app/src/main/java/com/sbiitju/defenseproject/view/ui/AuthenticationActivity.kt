@@ -1,12 +1,19 @@
 package com.sbiitju.defenseproject.view.ui
 
+import android.Manifest
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.content.pm.PackageManager
+import android.location.Location
+import android.location.LocationListener
+import android.location.LocationManager
+import android.os.Build
 import android.os.Bundle
+import android.provider.Settings
 import android.util.Log
 import android.view.View
-import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -17,8 +24,10 @@ import com.google.android.material.progressindicator.CircularProgressIndicator
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.database.*
 import com.sbiitju.defenseproject.R
 import com.sbiitju.defenseproject.databinding.ActivityAuthintacationBinding
+import com.sbiitju.defenseproject.model.data.LatLon
 import com.sbiitju.defenseproject.util.ResponseInterface
 import com.sbiitju.defenseproject.viewmodel.AuthViewModel
 
@@ -31,13 +40,13 @@ class AuthenticationActivity : AppCompatActivity(),ResponseInterface{
     var activityAuthenticationBinding:ActivityAuthintacationBinding?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        activityAuthenticationBinding= ActivityAuthintacationBinding.inflate(layoutInflater)
+        setContentView(activityAuthenticationBinding?.root)
         supportActionBar?.hide()
         progressIndicator= CircularProgressIndicator(this)
         progressIndicator.show()
         auth= FirebaseAuth.getInstance()
         check(auth.currentUser)
-        activityAuthenticationBinding= ActivityAuthintacationBinding.inflate(layoutInflater)
-        setContentView(activityAuthenticationBinding?.root)
         authViewModel=ViewModelProvider(this)[AuthViewModel::class.java]
         activityAuthenticationBinding?.viewmodel=authViewModel
         authViewModel!!.responseInterface=this
@@ -129,4 +138,6 @@ class AuthenticationActivity : AppCompatActivity(),ResponseInterface{
         private const val TAG = "GoogleActivity"
         private const val RC_SIGN_IN = 9001
     }
+
+
 }
